@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE 1 : PIN -->
+<section id="page1" class="page active">
+  <div class="card">
+    <h2>🔐 ใส่รหัสผ่าน</h2>
+    <h5>คำใบ้: วันสำคัญของคุณและเค้า</h5>
+    <div class="pin-box" id="pinBox"></div>
+    <input type="password" maxlength="1" class="pin-input">
+    <input type="password" maxlength="1" class="pin-input">
+    <input type="password" maxlength="1" class="pin-input">
+    <input type="password" maxlength="1" class="pin-input">
+  </div>
+  <p id="error" class="error"></p>
+</section>
+
+<!-- PAGE 2 : รับดอกไม้ -->
+<section id="page2" class="page">
+  <div class="card">
+    <div class="flower">🌹</div>
+    <h3>รับดอกไม้นี้จากไอเด็กตัวน้อยของเธอหน่อยได้มั้ยไหมคะ?</h3>
+    <button onclick="goToPage(3)">รับดอกไม้ 💐</button>
+  </div>
+</section>
+
+<!-- PAGE 3 : เมนู -->
+<section id="page3" class="page">
+  <div class="card menu">
+    <h2>📖 เลือกเมนู</h2>
+    <button onclick="openMenu('time')">เราคบกันมานานแค่ไหนแล้ว</button>
+    <button onclick="openMenu('letter')">จดหมายถึงคนน่ารัก</button>
+    <button onclick="openMenu('quiz')">เรารู้จักกันแค่ไหน</button>
+    <button onclick="openMenu('memory')">ความทรงจำ</button>
+  </div>
+  <div class="next-wrap">
+    <button onclick="goToPage(4)">ไปหน้าถัดไป 🎵</button>
+  </div>
+</section>
+
+
+<!-- เมนูย่อย -->
+<section id="submenu" class="page">
+  <div class="card" id="submenuContent"></div>
+</section>
+
+<!-- PAGE 4 : เพลง -->
+<section id="page4" class="page">
+  <div class="card">
+    <h2>เพลงของเรา 🎶</h2>
+    <button onclick="playMusic()">▶ เล่นเพลง</button>
+    <audio id="music" src="music.mp3"></audio>
+    <br><br>
+    <button onclick="goToPage(5)">ไปต่อ 💕</button>
+  </div>
+</section>
+
+<!-- PAGE 5 : รักไหม -->
+<section id="page5" class="page">
+  <div class="card">
+    <h2>บี๋รักหนูม้ายคะ 💖</h2>
+    <button id="yesBtn" onclick="showLove()">Yes 💘</button>
+    <button id="noBtn" onmouseover="moveNo()">No 💔</button>
+  </div>
+</section>
+
+<!-- FINAL PAGE -->
+<section id="finalPage" class="page">
+  <div class="card">
+    <h1>หนูก็รักบิบี๋ เย้ะ 💕</h1>
+    <img src="1f39b03f-5272-49d7-acb8-2217557d3267" width="200">
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
